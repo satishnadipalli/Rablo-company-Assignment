@@ -1,0 +1,55 @@
+.update-div{
+    height: 200px;
+    width: 300px;
+    background-color: white;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.buttons-div{
+    height: 35px;
+    width: 100%;
+    background-color: pink;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 0;
+}
+
+button{
+    width: 50%;
+}
+
+.constant-input{
+    display: block;
+    width: 100%;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 15px;
+    padding: 10px;
+    border: none;
+    border-bottom: 2px solid black;
+    padding-bottom: 4px;
+    outline: none;
+}
+
+.span{
+    margin-top: 5px;
+    margin-left: 5px;
+    padding-top: 20px;
+    font-weight: 500;
+}
+
+.change-input{
+    display: block;
+    width: 100%;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 15px;
+    padding: 10px;
+    border: none;
+    border-bottom: 2px solid black;
+    padding-bottom: 4px;
+    outline: none;
+}
