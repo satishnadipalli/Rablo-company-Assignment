@@ -4,7 +4,8 @@ const USER_DB = require("./userModels");
 const todoSchema = mongoose.Schema({
     todoDesc:{
         type:String,
-        required:[true,"the todo is required"]
+        required:[true,"the todo is required"],
+        default : "empty todo"
     },
     isCompleted:{
         type:Boolean,
@@ -19,3 +20,4 @@ const todoSchema = mongoose.Schema({
 
 
 module.exports = mongoose.model("TODOS",todoSchema);
+
