@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 // import "../styles/updateModal.css"
-import styles from "../styles/updateModal.css"
 import { useDispatch, useSelector } from 'react-redux'
 import { updateTodo } from '@/redux/silces/todoSlices';
 
