@@ -5,6 +5,7 @@
     border-radius: 10px;
     position: relative;
     overflow: hidden;
+
 }
 
 .buttons-div{
@@ -19,17 +20,24 @@
 
 button{
     width: 50%;
+    border: none;
+    background-color: white;
+    font-weight: 600;
+}
+
+button:hover{
+    color:red;
 }
 
 .constant-input{
     display: block;
-    width: 100%;
+    width: 90%;
     margin-left: 5px;
     margin-right: 5px;
     margin-top: 15px;
     padding: 10px;
     border: none;
-    border-bottom: 2px solid black;
+    border-bottom: 1px solid rgb(91, 91, 91);
     padding-bottom: 4px;
     outline: none;
 }
@@ -43,13 +51,13 @@ button{
 
 .change-input{
     display: block;
-    width: 100%;
+    width: 90%;
     margin-left: 5px;
     margin-right: 5px;
     margin-top: 15px;
     padding: 10px;
     border: none;
-    border-bottom: 2px solid black;
+    border-bottom: 1px solid rgb(74, 74, 74);
     padding-bottom: 4px;
     outline: none;
 }

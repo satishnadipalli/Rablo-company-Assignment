@@ -13,33 +13,20 @@ const todoSlice = createSlice({
             state.userTodos.push(action.payload);
         },
         setCurrentTodo:(state,action)=>{
-            state.currentTodo = action.payload;
-        }
-        ,
+            const currentOne = state.userTodos.find((item)=>item.id === action.payload);
+
+            state.currentTodo = currentOne;
+        },
+
         deleteTodo: (state, action) => {
-            // Find the todo item to delete
-            const deletedTodoIndex = state.userTodos.findIndex(item => item.id === action.payload);
-        
-            // If the todo item is not found, return the current state
-            if (deletedTodoIndex === -1) {
-                return state;
+            if (!state.currentTodo.isCompleted) {
+                alert("please mark the task completed");
+                return;
             }
+            const updatedTodos = state.userTodos.filter(element => element.id !== state.currentTodo.id && !element.isCompleted);
+            state.userTodos = updatedTodos;
+        },
         
-            // If the found todo item is not completed, return the current state
-            if (!state.userTodos[deletedTodoIndex].isCompleted) {
-                console.log("returned");
-                return state;
-            }
-        
-            // Remove the completed todo item from userTodos
-            const updatedTodos = state.userTodos.filter(item => item.id !== action.payload);
-        
-            // Return the updated state
-            return {
-                ...state,
-                userTodos: updatedTodos
-            };
-        },        
         updateIsCompleted: (state, action) => {
             const updatedTodos = state.userTodos.map((item) => {
                 if (item.id === action.payload) {

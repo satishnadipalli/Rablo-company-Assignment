@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
-import "../styles/updateModal.css"
+// import "../styles/updateModal.css"
+import styles from "../styles/updateModal.css"
 import { useDispatch, useSelector } from 'react-redux'
 import { updateTodo } from '@/redux/silces/todoSlices';
 
@@ -13,7 +14,7 @@ const UpdateModel = ({setIsOpen}) => {
       setIsOpen(false);
     }
 
-    // dispatch(setCurrentTodo(id));
+
   return (
     <div style={{
         position: 'fixed',
@@ -34,7 +35,7 @@ const UpdateModel = ({setIsOpen}) => {
             value={currentTodo?.desc} 
             className="constant-input"
         />
-        <input className='change-input' type="text" value={updateDesc} onChange={(event)=>{setUPdateDesc(event.target.value)}} />
+        <input className='change-input' type="text" placeholder='change here' value={updateDesc} onChange={(event)=>{setUPdateDesc(event.target.value)}} />
         <p className='span'>created on : {currentTodo?.date}</p>
         <div className='buttons-div'>
             <button onClick={()=>setIsOpen(pre=>!pre)}>Cancel</button>

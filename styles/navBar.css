@@ -10,3 +10,19 @@
     color:white;
     
 }
+body{
+    overflow: hidden;
+    margin: 0;
+}
+.footer{
+    height: 50px;
+    width: 100%;
+    color: gray;
+    position: absolute;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(224, 224, 224);
+    align-items: center;
+}

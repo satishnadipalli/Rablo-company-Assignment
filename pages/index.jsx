@@ -5,6 +5,7 @@ import RootLayout from '@/components/Layout';
 import GlobalProvider from '@/redux/Provider';
 import AllTodos from '@/components/AllTodos';
 import NavBar from '@/components/NavBar';
+import Footer from '@/components/Footer';
 const Home = () => {
 
   return (
@@ -13,6 +14,7 @@ const Home = () => {
           <div>
             <NavBar/>
             <AllTodos/>
+            <Footer/>
           </div>
         </RootLayout>
     </GlobalProvider>
